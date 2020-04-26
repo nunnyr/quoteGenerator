@@ -40,11 +40,10 @@ const quotes = [
   source: "Marie Curie",
 },
 {
-  
+  quote: ,
+  source: ,
 },
-{},
-{},
-{},
+,
 ];
 
 
