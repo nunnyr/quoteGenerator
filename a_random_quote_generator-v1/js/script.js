@@ -39,12 +39,10 @@ const quotes = [
   quote: "We must have perseverance and above all confidence in ourselves. We must believe that we are gifted for something and that this thing must be attained.",
   source: "Marie Curie",
 },
-{
-  quote: ,
-  source: ,
-},
-,
+
 ];
+
+console.log("this is the quote", quotes)
 
 
 
@@ -52,16 +50,26 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 
-function getRandomQuote() {
-  let number;
+let number;
 
-
+function getRandomQuote(array) {
+  number = Math.ceil(Math.random() * quotes.length-1);
+  console.log("NUMBA", number);
+  let quoteGiven = quotes[number];
+  return quoteGiven;
 }
 
+getRandomQuote();
 /***
  * `printQuote` function
 ***/
 
+function printQuote() {
+  //return ("hello")
+  let savedQuote = getRandomQuote();
+
+
+}
 
 
 /***
