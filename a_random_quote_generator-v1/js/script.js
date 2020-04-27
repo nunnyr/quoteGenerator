@@ -56,6 +56,7 @@ function getRandomQuote(array) {
   number = Math.ceil(Math.random() * quotes.length-1);
   console.log("NUMBA", number);
   let quoteGiven = quotes[number];
+  console.log("quotegiven:", quoteGiven);
   return quoteGiven;
 }
 
@@ -67,6 +68,8 @@ getRandomQuote();
 function printQuote() {
   //return ("hello")
   let savedQuote = getRandomQuote();
+  let paragraphs = <p class="quote"> A random quote </p> <p class="source"> quote source </p>;
+  //console.log("i am clicking")
 
 
 }
