@@ -68,10 +68,26 @@ getRandomQuote();
 function printQuote() {
   //return ("hello")
   let savedQuote = getRandomQuote();
-  let paragraphs = <p class="quote"> A random quote </p> <p class="source"> quote source </p>;
+  let html = `
+  
+    <p class="quote"> ${randomQuote.quote} </p> 
+    <p class="source"> ${randomQuote.source}
+    `
+  
+  if(randomQuote.quote) {
+    html += `<span class="citation">${randomQuote.citation}</span>`;
+  }
+
+
+  
+  if(randomQuote.source) {
+    html += `<span class="citation">${randomQuote.source}</span>`;
+    
+  }
+    html += '</p>';
   //console.log("i am clicking")
 
-
+  document.getElementById("quote-box").innerHTML = html;
 }
 
 
