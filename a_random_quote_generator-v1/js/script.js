@@ -10,6 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
+//Created an array of objects filled
 
 const quotes = [
   {
@@ -18,31 +19,38 @@ const quotes = [
     citation: "Nobel Peace Prize Speech",
     year: 1983
   },
-{
+
+  {
   quote: "Science and everyday life cannot and should not be separated.",
   source: "Rosalind Franklin",
+  citation: "Nobel Peace Prize Speech",
+  year: 1940
+  },
 
-},
-{
+  {
   quote: "I hadn't been aware that there were doors closed to me until I started knocking on them.",
   source: "Gertrude B. Elion",
-},
-{
-  quote: "Science and everyday life cannot and should not be separated.",
-  source: "Rosalind Franklin",
-},
-{
+  citation: "Harvard University",
+  year: 1920
+  },
+
+  {
   quote: "Don’t let anyone rob you of your imagination, your creativity, or your curiosity. It’s your place in the world; it’s your life. Go on and do all you can with it, and make it the life you want to live.",
-  source: "Mae Jemison"
-},
-{
+  source: "Mae Jemison",
+  citation: "NASA",
+  year: 1983
+  },
+  
+  {
   quote: "We must have perseverance and above all confidence in ourselves. We must believe that we are gifted for something and that this thing must be attained.",
   source: "Marie Curie",
-},
+  citation: "Yale University",
+  year: 1920
+  },
 
 ];
 
-console.log("this is the quote", quotes)
+//console.log("this is the quote", quotes)
 
 
 
@@ -70,24 +78,24 @@ function printQuote() {
   let savedQuote = getRandomQuote();
   let html = `
   
-    <p class="quote"> ${randomQuote.quote} </p> 
-    <p class="source"> ${randomQuote.source}
+    <p class="quote"> ${savedQuote.quote} </p> 
+    <p class="source"> ${savedQuote.source}
     `
   
-  if(randomQuote.quote) {
-    html += `<span class="citation">${randomQuote.citation}</span>`;
+  if(savedQuote.quote) {
+    html += `<span class="citation">${savedQuote.citation}</span>`;
   }
-
-
   
-  if(randomQuote.source) {
-    html += `<span class="citation">${randomQuote.source}</span>`;
+   if(savedQuote.year) {
+     html += `<span class="year">${savedQuote.year}</span>`;
     
-  }
+   }
     html += '</p>';
-  //console.log("i am clicking")
+  
+  console.log("i am clicking")
 
   document.getElementById("quote-box").innerHTML = html;
+
 }
 
 
