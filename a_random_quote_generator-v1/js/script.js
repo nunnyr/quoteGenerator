@@ -10,8 +10,8 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-//Created an array of objects filled
 
+//Created an array of objects filled with properties such as quote, source, citation, year
 const quotes = [
   {
     quote: "If you know you are on the right track, if you have this inner knowledge, then nobody can turn you off... no matter what they say.",
@@ -50,7 +50,6 @@ const quotes = [
 
 ];
 
-//console.log("this is the quote", quotes)
 
 
 
@@ -58,20 +57,29 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 
-let number;
+
+//Create a random number that is randomized and is no bigger than the length of the quotes
+//The number will be our index. quotes[number] will return a random quote object.
 
 function getRandomQuote(array) {
-  number = Math.ceil(Math.random() * quotes.length-1);
-  console.log("NUMBA", number);
+  let number = Math.floor(Math.random() * quotes.length);
   let quoteGiven = quotes[number];
-  console.log("quotegiven:", quoteGiven);
+  console.log("This is my random quote object:", quoteGiven);
   return quoteGiven;
 }
 
-getRandomQuote();
+
+//getRandomQuote();
 /***
  * `printQuote` function
 ***/
+
+
+//saveQuote is storing and calling the random quote
+//we are adding html string interpolation to add additional html
+//we are adding the quote and source as classes
+//then we are checking to see if the quote has a citation or a year.
+//2 if statements are created to check for that.
 
 function printQuote() {
   //return ("hello")
@@ -90,9 +98,10 @@ function printQuote() {
      html += `<span class="year">${savedQuote.year}</span>`;
     
    }
+   //html adds the closing </p>
     html += '</p>';
   
-  console.log("i am clicking")
+  //console.log("testing to see if the click event listener works: i am clicking")
 
   document.getElementById("quote-box").innerHTML = html;
 
