@@ -107,6 +107,7 @@ function printQuote() {
 
 }
 
+setInterval(printQuote, 6000);
 
 /***
  * click event listener for the print quote button
