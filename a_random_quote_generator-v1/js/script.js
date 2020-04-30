@@ -90,7 +90,7 @@ function printQuote() {
     <p class="source"> ${savedQuote.source}
     `
   
-  if(savedQuote.quote) {
+  if(savedQuote.citation) {
     html += `<span class="citation">${savedQuote.citation}</span>`;
   }
   
@@ -102,9 +102,8 @@ function printQuote() {
     html += '</p>';
   
   //console.log("testing to see if the click event listener works: i am clicking")
-
   document.getElementById("quote-box").innerHTML = html;
-
+ 
 }
 
 setInterval(printQuote, 6000);
